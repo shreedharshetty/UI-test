@@ -1,0 +1,12 @@
+<section>
+	<h2>Why Require.js ? </h2>
+	<h3>The Problem : </h3>
+	<p>If you’ve been writing client-side JavaScript for a while, you might have noticed a <sarcasm> small </sarcasm> problem with JavaScript. The only—or at least, the standard—way of getting multiple JavaScript files onto a page is to include multiple script tags. like, <br /> 
+		&lt;script src=&quot;file1.js&quot;&gt;&lt;/script&gt; <br />
+		&lt;script src=&quot;file2.js&quot;&gt;&lt;/script&gt; <br />
+	    &lt;script src=&quot;file3.js&quot;&gt;&lt;/script&gt; <br />
+	</p>
+	<p>There are a couple of issues with this method.</p>
+	<p>Firstly, it’s just plain inconvenient. All the JavaScript in all the scripts is loaded into the global “namespace.” Of course, this may be misleading to beginners, who could easily—and excusable—think that identically-named variables in different files won’t conflict. But more than that, it’s a pain for experienced JavaScript developers with perhaps dozens of JavaScript files. Some files will depend on others, which may depend on others, etc. And you’re on playground duty: you’ve got to make sure they all arrive in the right order, and that nobody clobbers anybody. This can be both tricky or time-consuming, depending on the project.</p>
+	<p>Secondly—and more importantly—when a browser is downloading and executing JavaScript files, that’s all it’s doing; it’s blocking the downloading of other content until that’s done. This is why you’ve heard it recommended to put your &lt;script &gt; tags at the end of your &lt; body &gt;, instead of in your &gt; head &lt; as used to be the idea: that way, all your other content (HTML, CSS, images, etc.) will be visible to the user before the JavaScript is downloaded and executed. By using one of the many script loaders available, you’ll be able optimize this process at much as possible. RequireJS is one of those loaders, and you’ll get all the benefits of using it with AMD.</p>
+</section>

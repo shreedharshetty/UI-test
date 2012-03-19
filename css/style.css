@@ -13,28 +13,17 @@
 	width: 1180px;
 	margin-right: 200px;
 	text-align: center;
-	display: -webkit-box;
-	-webkit-box-align: center;
-	-moz-box-align: center;
-	 box-align: center;
 	-webkit-box-orient: horizontal;
 	-moz-box-orient: horizontal;
 	 box-orient: horizontal;
-	-webkit-box-pack: center;
-	-moz-box-pack: center;
-	 box-pack: center;
 	-webkit-transition: all 1s linear;
 	-moz-transition: all 1s linear;
+	margin-top : 50px;
 }
 
 #slides {
 	font-family: arial;
 }
-
-#slides div {
-	margin-top: 50px;
-}
-
 
 #slides h1,
 #slides h2,
@@ -62,7 +51,7 @@ h2 span {
     letter-spacing: -1px;
     line-height: 1em;
     margin-bottom: 10px;
-    text-shadow: 6px 1px 0 white;
+    text-shadow: 6px 1px 0 silver;
 }
 
 #slides h3 {
@@ -84,9 +73,6 @@ h2 span {
 li {
 	color: silver ;
 	font-size: .9em;
-}
-#slides p{
-	color: silver;
 }
 span#CurrenPageId{
 	color:silver;

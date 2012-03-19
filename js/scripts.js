@@ -81,7 +81,7 @@ require(['libs/jQuery','canvas'], function(){
          var num = this.currentSlide + "/" + this.totalSlides;
          var slideNum = parseInt(this.currentSlide) + 1;
          var CurrenPageId = document.getElementById("CurrenPageId");
-         CurrenPageId.innerHTML = " slide "  + slideNum + " of " + this.totalSlides;
+         CurrenPageId.innerHTML = " Slide "  + slideNum + " of " + this.totalSlides;
       },
 
       goto : function(slide) {

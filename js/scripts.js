@@ -49,7 +49,7 @@ require(['libs/jQuery','canvas'], function(){
             // if left or right arrow key is pressed
             if ( e.keyCode === 39 || e.keyCode === 37 ) {
                e.preventDefault();
-               ( e.keyCode === 39 ) ? Slides.nextslide() : Slides.prev();
+               ( e.keyCode === 39 ) ? Slides.nextslide() : Slides.prevslide();
             }
          });
       },
@@ -68,7 +68,7 @@ require(['libs/jQuery','canvas'], function(){
          }      
       },
 
-     prev : function() {
+     prevslide : function() {
         // No more left to go back.
          if ( Slides.translateAmount === 0 ) return;
          Slides.translateAmount += Slides.slideWidth;
@@ -78,7 +78,11 @@ require(['libs/jQuery','canvas'], function(){
       },
 
       updateInfo : function(){
-         console.log(this.currentSlide + "/" + this.totalSlides);
+         var num = this.currentSlide + "/" + this.totalSlides;
+         var slideNum = parseInt(this.currentSlide) + 1;
+         var CurrenPageId = document.getElementById("CurrenPageId");
+         CurrenPageId.innerHTML = " slide "  + slideNum + " of " + this.totalSlides;
+         CurrenPageId.css({'color' : '#fff'});
       },
 
       goto : function(slide) {
@@ -94,7 +98,7 @@ require(['libs/jQuery','canvas'], function(){
         Slides
          .container
          .children()
-            .css( {'-webkit-transform' : 'translateX(' + Slides.translateAmount + 'px)','-moz-transform' : 'translateX(' + Slides.translateAmount + 'px)', 'transform' : 'translateX(' + Slides.translateAmount + 'px)'});
+            .css( { '-webkit-transform' : 'translateX(' + Slides.translateAmount + 'px)', '-moz-transform' : 'translateX(' + Slides.translateAmount + 'px)', 'transform' : 'translateX(' + Slides.translateAmount + 'px)'});
      },
 
      updateHash : function( direction ) {
@@ -105,6 +109,6 @@ require(['libs/jQuery','canvas'], function(){
    };
 
    // All right; let's do this. 
-   Slides.init(5);
+   Slides.init(6);
 
 });
